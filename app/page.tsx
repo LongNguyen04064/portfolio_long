@@ -1,4 +1,4 @@
-import Experience from "@/components/experience";
+import Project from "@/components/project";
 import Header from "@/components/header";
 import Info from "@/components/info";
 import info from "@/components/info";
@@ -12,7 +12,7 @@ export default function Home() {
         <Info/>
       </main>
       <section className="py-28 px-6 relative overflow-hidden">
-        <Experience/> 
+        <Project/> 
       </section>
     </div>
   );
