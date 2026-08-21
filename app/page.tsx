@@ -1,6 +1,7 @@
 import Project from "@/components/project";
 import Header from "@/components/header";
 import Info from "@/components/info";
+import Technical from "@/components/technical";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <main className="flex-1 pt-16">
         <Info/>
         <Project/>
+        <Technical/>
       </main>
     </div>
   );
