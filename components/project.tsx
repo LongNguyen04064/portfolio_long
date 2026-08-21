@@ -59,7 +59,7 @@ export default function Project() {
     };
     
   return (
-    <section id="projects" className='relative min-h-screen overflow-hidden bg-slate-50 py-24 lg:py32'>
+    <section id="projects" className='relative min-h-screen overflow-hidden bg-slate-50 py-24 lg:py-32'>
         <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_65%_15%,rgba(59,130,246,0.10),transparent_30%)]'/>
         <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 blur-3xl'/>
         <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-indigo-200/20 blur-3xl'/>
