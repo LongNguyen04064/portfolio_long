@@ -12,9 +12,9 @@ import {
 export default function Header() {
     const navItem=[
         {name:"Home", href:"#"},
-        {name:"About", href:"#"},
-        {name:"Projects", href:"#"},
-        {name:"Contact", href:"#"},
+        {name:"Projects", href:"#projects"},
+        {name:"Skills", href:"#technical"},
+        {name:"Contact", href:"#contact"},
     ]
     const [open, setOpen] = useState(false);
 
@@ -32,7 +32,11 @@ export default function Header() {
                 <ul className="nav-menu items-center gap-2">
                     {
                         navItem.map((item)=>(
-                            <li key={item.name}><a href={item.href}>{item.name}</a></li>
+                            <li key={item.name}>
+                                <a href={item.href}>
+                                    {item.name}
+                                </a>
+                            </li>
                         ))
                     }
                     <Button variant="outline" size="icon">

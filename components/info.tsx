@@ -5,9 +5,9 @@ import { TypeAnimation } from 'react-type-animation'
 
 export default function Info() {
   const infoItem = [
-    {src:"/icons/github.png", href:"#", lable:"Github"},
-    {src:"/icons/mail1.png", href:"#", lable:"Email"},
-    {src:"/icons/linkedin.png", href:"#", lable:"LinkedIn"},
+    {src:"/icons/github.png", href:"https://github.com/LongNguyen04064", lable:"Github"},
+    {src:"/icons/mail1.png", href:"mailto:ntlong058@gmail.com", lable:"Email"},
+    {src:"/icons/linkedin.png", href:"https://www.linkedin.com/in/ntlong0406/", lable:"LinkedIn"},
   ]
 
   function CodeLine({
@@ -87,6 +87,8 @@ export default function Info() {
                       key={item.lable}
                       href={item.href}
                       arial-label={item.lable}
+                      target='_blank'
+                      rel="noopener noreferrer"
                       className="group w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 bg-white text-slate-500 transition-all duration-300 shadow-sm hover:-translate-y-1 hover:shadow-md hover:bg-blue-50 hover:border-blue-200 hover:text-blue 600"
                     >
                       <Image
@@ -121,14 +123,14 @@ export default function Info() {
               </div>
             </div>
             <div className='flex flex-wrap gap-3 mt-8 mb-9 justify-center lg:justify-start'>
-              <a href='#'
+              <a href='#projects'
                 className='inline-flex items-center justify-center gap-2 text-white bg-blue-600 px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-105 bg-linear-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:-translate-y-1 hover:bg-blue-700 hover:shadow-blue-500/30'>
                 View Projects
                 <ArrowUpRight
                   className="w-5 h-5"
                   />
               </a>
-              <a href='#' 
+              <a href='#contact' 
                 className='inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-200 font-semibold text-sm sm:text-base bg-white/80 backdrop-blur text-slate-700 shadow transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:text-blue-600 hover:shadow-lg'>
                 Get In Touch
               </a>

@@ -53,7 +53,7 @@ const technologies = [
 
 export default function Technical() {
   return (
-    <section id='technical' className='relative min-h-screen overflow-hidden bg-blue-50 py-24 lg:py-32'>
+    <section id='technical' className='relative min-h-screen overflow-hidden bg-slate-50 py-24 lg:py-32'>
         <div className='relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10'>
             <div className='mb-6 lg:mb-20'>
                 <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>03. Arsenal</p>
