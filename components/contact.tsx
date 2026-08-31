@@ -2,6 +2,7 @@
 import { MapPin, ArrowUpRight, Mail, Send } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import Reveal from './reveal'
 
 export default function Contact() {
     const [form, setForm] = useState ({
@@ -66,22 +67,27 @@ export default function Contact() {
 
   return (
     <section id='contact' className='relative overflow-hidden bg-blue-50 py-24 sm:py-32'>
+        <Reveal>
         <div className='relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10'>
-            <div className='mb-6 lg:mb-20'>
-                <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>04. contact</p>
-                <div className='flex items-end justify-between flex-wrap gap-5'>
-                    <h2 className='text-5xl font-bold tracking-tight sm:text-6xl'>Let's Build
-                        <br/>
-                        <span className='text-blue-500'>Something Great</span>
-                    </h2>
+            <Reveal>
+                <div className='mb-6 lg:mb-20'>
+                    <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>04. contact</p>
+                    <div className='flex items-end justify-between flex-wrap gap-5'>
+                        <h2 className='text-5xl font-bold tracking-tight sm:text-6xl'>Let's Build
+                            <br/>
+                            <span className='text-blue-500'>Something Great</span>
+                        </h2>
+                    </div>
+                    <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
                 </div>
-                <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
-            </div>
+            </Reveal>
             <div className='grid lg:grid-cols-2 gap-10 lg:gap-16'>
                 <div className='flex flex-col'>
-                    <p className='max-w-7xl text-xl text-muted-foreground leading-relaxed mb-8'>
-                        Open to product engineering roles, freelance builds, and collaboration on motion-heavy web experiences.
-                    </p>
+                    <Reveal>
+                        <p className='max-w-7xl text-xl text-muted-foreground leading-relaxed mb-8'>
+                            Open to product engineering roles, freelance builds, and collaboration on motion-heavy web experiences.
+                        </p>
+                    </Reveal>
                     <div className='mt-8 flex flex-col gap-3'>
                         {contactItems.map((item) => (
                             <a key={item.title} 
@@ -186,6 +192,7 @@ export default function Contact() {
                 </div>
             </div>
         </div>
+        </Reveal>
     </section>
   )
 }

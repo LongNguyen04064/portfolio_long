@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ProjectCard from "./projectcard"
 import { FolderOpenDot, CalendarDays } from "lucide-react";
+import Reveal from "./reveal";
 
 export default function Project() {
     //Ham quan ly trang thai cua project duoc mo hoac dong
@@ -64,13 +65,16 @@ export default function Project() {
         <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 blur-3xl'/>
         <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-indigo-200/20 blur-3xl'/>
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
-            <div className='mb-6 lg:mb-20'>
-                <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>02. Career</p>
-                <div className='flex items-end justify-between flex-wrap gap-5'>
-                    <h2 className='text-5xl font-bold tracking-tight sm:text-6xl'>Projects</h2>
+            <Reveal>
+                <div className='mb-6 lg:mb-20'>
+                    <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>02. Career</p>
+                    <div className='flex items-end justify-between flex-wrap gap-5'>
+                        <h2 className='text-5xl font-bold tracking-tight sm:text-6xl'>Projects</h2>
+                    </div>
+                    <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
                 </div>
-                <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
-            </div>
+            </Reveal>
+            <Reveal>
             <div className='relative'>
                 <div className='absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-blue-300 hidden md:block'></div>
                 {
@@ -179,6 +183,7 @@ export default function Project() {
                     })
                 }
             </div>
+            </Reveal>
         </div>
     </section>
   )
