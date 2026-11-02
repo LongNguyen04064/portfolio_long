@@ -54,14 +54,17 @@ const technologies = [
 
 export default function Technical() {
   return (
-    <section id='technical' className='relative min-h-screen overflow-hidden bg-slate-50 py-24 lg:py-32'>
+    <section id='technical' className='relative min-h-screen overflow-hidden border-t border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-950 py-24 lg:py-32'>
+        <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
+        <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+        <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <div className='relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10'>
             <Reveal>
                 <div className='mb-6 lg:mb-20'>
                     <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>03. Arsenal</p>
                     <div className='flex items-end justify-between flex-wrap gap-5'>
                         <h2 className='text-5xl font-bold tracking-tight sm:text-6xl'>Technical Skills</h2>
-                        <p className="max-w-md text-base leading-7 text-slate-500">
+                        <p className="max-w-md text-base leading-7 text-slate-500 dark:text-slate-400">
                             A collection of technologies I use to turn ideas into fast, accessible and scalable digital experiences.
                         </p>
                     </div>
@@ -73,14 +76,14 @@ export default function Technical() {
                     <div className="relative">
                         <div className="absolute -left-10 top-4 hidden h-24 w-24 rounded-full border border-blue-500/30 lg:block"></div>
                         <div className="relative">
-                            <span className="text-xs font-mono uppercase tracking-[0.3em] text-slate-700">My toolkit</span>
-                            <h3 className="mt-5 max-w-sm text-3xl leading-relaxed tracking-tight text-slate-700 sm:text-4xl">
+                            <span className="text-xs font-mono uppercase tracking-[0.3em] text-slate-700 dark:text-slate-400">My toolkit</span>
+                            <h3 className="mt-5 max-w-sm text-3xl leading-relaxed tracking-tight text-slate-700 dark:text-slate-300 sm:text-4xl">
                                 Tools I use to build{" "}
                                 <span className="text-blue-600">
                                     meaningful products.
                                 </span>
                             </h3>
-                            <p className="mt-3 max-w-md text-base leading-7 text-slate-500">
+                            <p className="mt-3 max-w-md text-base leading-7 text-slate-500 dark:text-slate-400">
                                 From polished frontend interfaces to APIs and mobile applications, I focus on choosing the right technology for the product rather than using technology for its own sake.
                             </p>
                         </div>
@@ -90,31 +93,31 @@ export default function Technical() {
                     <div className="grid sm:grid-cols-2 gap-3">
                         {technologies.map((item, index) => {
                             return (
-                                <div key={item.name} className="group relative overflow-hidden rounded-xl border border-slate-400 bg-blue-50 p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-500">
+                                <div key={item.name} className="group relative overflow-hidden rounded-xl border border-slate-400 bg-white/80 p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-500 dark:border-slate-700 dark:bg-slate-900/80 dark:hover:border-blue-400">
                                     <div className="pointer-events-none absolute -left-10 -top-10 h-20 w-20 rounded-full bg-blue-500/50 blur-3xl transition-all duration-500 group-hover:bg-blue-500/20" />
-                                    <span className="absolute right-5 top-5 font-mono text-[10px] tracking-widest text-slate-700 transition-colors duration-300 group-hover:text-blue-600">
+                                    <span className="absolute right-5 top-5 font-mono text-[10px] tracking-widest text-slate-700 transition-colors duration-300 group-hover:text-blue-600 dark:text-slate-500 dark:group-hover:text-blue-400">
                                         {(index + 1)
                                             .toString()
                                             .padStart(2, "0")}
                                     </span>
-                                    <div className="relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-400 p-2.5 transition-all duration-300 group-hover:scale-110 group-hover:text-blue-600 group-hover:border-blue-500/50 group-hover:bg-blue-500/10">
+                                    <div className="relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-400 p-2.5 transition-all duration-300 group-hover:scale-110 group-hover:text-blue-600 group-hover:border-blue-500/50 group-hover:bg-blue-500/10 dark:border-slate-700 dark:group-hover:text-blue-400">
                                         <img 
                                             src={item.icon}
                                             alt={`${item.name} logo`}
-                                            className="h-full w-full object-contain"
+                                            className="h-full w-full object-contain transition-all duration-300 dark:invert dark:brightness-0"
                                             loading="lazy">
                                         </img>
                                     </div>
                                     <div className="relative mt-2">
                                         <div className="flex flex-wrap items-center gap-2">
-                                            <h4 className="text-lg font-semibold tracking-tight text-blue-600">
+                                            <h4 className="text-lg font-semibold tracking-tight text-blue-600 dark:text-blue-400">
                                                 {item.name}
                                             </h4>
-                                            <span className="rounded-full border border-blue-600 px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-blue-600">
+                                            <span className="rounded-full border border-blue-600 px-2 py-0.5 font-mono text-[8px] uppercase tracking-wider text-blue-600 dark:border-blue-400 dark:text-blue-400">
                                                 {item.category}
                                             </span>
                                         </div>
-                                        <p className="mt-3 text-sm leading-6 text-slate-600">
+                                        <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
                                             {item.description}
                                         </p>
                                     </div>
@@ -126,16 +129,16 @@ export default function Technical() {
                 </Reveal>
             </div>
             <div className="mt-16 flex items-center gap-4 lg:mt-20">
-                    <div className="h-px flex-1 bg-linear-to-r from-transparent via-slate-700 to-slate-700" />
+                    <div className="h-px flex-1 bg-linear-to-r from-transparent via-slate-700 to-slate-700 dark:via-slate-700 dark:to-slate-700" />
 
                     <div className="flex items-center gap-2">
                         <Zap
                             size={13}
-                            className="text-blue-400"
+                            className="text-blue-500 dark:text-blue-400"
                             strokeWidth={1.5}
                         />
 
-                        <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-slate-600">
+                        <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-slate-600 dark:text-slate-400">
                             Always learning
                         </span>
                     </div>

@@ -32,19 +32,19 @@ export default function Info() {
   }
 
   return (
-    <section id='home' className='relative min-h-screen overflow-hidden bg-slate-50 flex items-center'>
-      <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_65%_15%,rgba(59,130,246,0.10),transparent_30%)]'/>
-      <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 blur-3xl'/>
-      <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-indigo-200/20 blur-3xl'/>
+    <section id='home' className='relative min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950 flex items-center transition-all duration-500'>
+      <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
+      <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+      <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
       <div className='relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 pt-28 pb-20 lg:pt-32'>
         <div className='grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-14 lg:gap-16 items-center'>
           <div className='text-center lg:text-left'>
-            <div className='inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-4 py-2 mb-7 shadow-sm'>
+            <div className='inline-flex items-center gap-2 rounded-full border border-blue-200 dark:border-slate-400 bg-blue-50/80 dark:bg-slate-800 px-4 py-2 mb-7 shadow-sm'>
               <span className='relative flex h-2 w-2'>
                 <span className='absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping'></span>
                 <span className='relative inline-flex h-2 w-2 rounded-full bg-green-500'></span>
               </span>
-              <span className='font-mono text-[11px] tracking-[0.2em] uppercase text-blue-600 font-medium'>
+              <span className='font-mono text-[11px] tracking-[0.2em] uppercase text-blue-600 dark:text-blue-300 font-medium'>
                 Open to opportunities
               </span>
             </div>
@@ -63,11 +63,11 @@ export default function Info() {
                 ease:[0.22, 1, 0.36, 1]
               }}
             >
-              <p className='font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-slate-500 mb-4'>
+              <p className='mb-4 font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-slate-500 dark:text-slate-400'>
                 Front-end Developer
               </p>
               <h1 className='leading-tight tracking-[-0.04em] mb-7'>
-                <span className='block font-black text-slate-950 text-[clamp(3.5rem,9vw,6.8rem)]'>
+                <span className='block font-black text-slate-950 text-[clamp(3.5rem,9vw,6.8rem)] dark:text-slate-50'>
                   Nguyễn Thái
                 </span>
                 <span className='block font-black text-[clamp(3.5rem,9vw,6.8rem)] bg-linear-to-r from-blue-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent'>
@@ -88,7 +88,7 @@ export default function Info() {
                 delay: 0.2,
               }}
             >
-              <div className='inline-flex items-center min-h-9 rounded-lg bg-blue-100/70 px-3 py-1 mb-6'>
+              <div className='inline-flex items-center min-h-9 rounded-lg bg-blue-100/70 px-3 py-1 mb-6 dark:bg-slate-800'>
                 <div className='font-mono text-sm font-semibold bg-linear-to-r from-blue-500 to-indigo-600 text-transparent bg-clip-text'>
                   <TypeAnimation
                   sequence={[
@@ -116,7 +116,7 @@ export default function Info() {
               duration: 0.6,
               delay: 0.35,
               }}
-              className="max-w-full mx-auto lg:mx-0 text-slate-500 leading-relaxed mb-7 text-base sm:text-lg"
+              className="max-w-full mx-auto lg:mx-0 text-slate-500 leading-relaxed mb-7 text-base sm:text-lg dark:text-slate-400"
             >
             Frontend Developer focused on building clean, interactive, and responsive user interfaces. Turning design concepts into functional, high-performance web applications and combine animations to make the website more visually appealing.
             </motion.p> 
@@ -147,26 +147,26 @@ export default function Info() {
                         arial-label={item.lable}
                         target='_blank'
                         rel="noopener noreferrer"
-                        className="group w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 bg-white text-slate-500 transition-all duration-300 shadow-sm hover:-translate-y-1 hover:shadow-md hover:bg-blue-50 hover:border-blue-200 hover:text-blue 600"
+                        className="group w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-500 dark:text-blue-500 transition-all duration-300 shadow-sm dark:shadow-black/20 hover:-translate-y-1 hover:shadow-md hover:bg-blue-50 dark:hover:bg-blue-950/50 hover:border-blue-200 dark:hover:border-blue-800 hover:text-blue 600"
                       >
                         <Image
                           src={item.src}
                           alt={item.lable}
                           width={100}
                           height={100}
-                          className='w-5 h-5 object-contain duration-300 transition-transform group-hover:scale-110'
+                          className='w-5 h-5 object-contain duration-300 transition-transform group-hover:scale-110 dark:brightness-0 dark:invert'
                         />
                       </a>
                     ))
                   }
                 </div>
-                <div className='hidden sm:block h-8 w-px bg-slate-200'></div>
+                <div className='hidden sm:block h-8 w-px bg-slate-200 dark:bg-slate-700'></div>
                 <div className='flex items-center gap-6'>
                   <div className='text-center'>
                     <p className='text-xl font-bold text-blue-600'>
                       2+
                     </p>
-                    <p className='font-mono text-[9px] tracking-wider uppercase text-slate-500'>
+                    <p className='font-mono text-[9px] tracking-wider uppercase text-slate-500 dark:text-slate-400'>
                       Projects
                     </p>
                   </div>
@@ -174,7 +174,7 @@ export default function Info() {
                     <p className='text-xl font-bold text-blue-600'>
                       5+
                     </p>
-                    <p className='font-mono text-[9px] tracking-wider uppercase text-slate-500'>
+                    <p className='font-mono text-[9px] tracking-wider uppercase text-slate-500 dark:text-slate-400'>
                       Technologies
                     </p>
                   </div>
@@ -221,15 +221,15 @@ export default function Info() {
           <Reveal>
             <div className="relative flex items-center justify-center lg:justify-end">
               <div className='absolute w-70 sm:w-100 h-70 sm:h-100 rounded-full bg-blue-300/20 blur-3xl'></div>
-              <div className='relative w-full max-w-135 overflow-hidden rounded-2xl border border-slate-200 bg-white/80 shadow-2xl shadow-slate-300/50 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-blue-200/50'>
-                <div className='flex items-center justify-between border-b border-slate-200 bg-slate-100/80 px-4 py-3'>
+              <div className='relative w-full max-w-135 overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 shadow-2xl shadow-slate-300/50 dark:shadow-black/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-blue-200/50 dark:hover:shadow-blue-900/30'>
+                <div className='flex items-center justify-between border-b border-slate-200 dark:border-slate-700 bg-slate-100/80 dark:bg-slate-800/80 px-4 py-3'>
                   <div className='flex items-center gap-2'>
                     <span className='h-3 w-3 rounded-full bg-red-400'></span>
                     <span className='h-3 w-3 rounded-full bg-green-400'></span>
                     <span className='h-3 w-3 rounded-full bg-yellow-400'></span>
-                    <span className='font-mono text-xs text-slate-500'>engineer.ts</span>
+                    <span className='font-mono text-xs text-slate-500 dark:text-slate-300'>engineer.ts</span>
                   </div>
-                  <span className='rounded-full bg-blue-100 px-3 py-1 font-mono text-[10px] font-semibold text-blue-600'>TypeSctipt</span>
+                  <span className='rounded-full bg-blue-100 dark:bg-blue-950/70 px-3 py-1 font-mono text-[10px] font-semibold text-blue-600 dark:text-blue-400'>TypeSctipt</span>
                 </div>
                 <div className='overflow-x-auto p-5 sm:p-7 font-mono text-xs sm:text-sm leading-8'>
                   <div className='min-w-100'>

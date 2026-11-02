@@ -60,10 +60,11 @@ export default function Project() {
     };
     
   return (
-    <section id="projects" className='relative min-h-screen overflow-hidden bg-blue-50 py-24 lg:py-32'>
-        <div className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_65%_15%,rgba(59,130,246,0.10),transparent_30%)]'/>
-        <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 blur-3xl'/>
-        <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-indigo-200/20 blur-3xl'/>
+    <section id="projects" className='relative min-h-screen overflow-hidden border-t border-slate-300 dark:border-slate-600 bg-blue-50 dark:bg-slate-950 py-24 lg:py-32 transition-all duration-300'>
+        <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
+        <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+        <div className='pointer-events-none absolute -bottom-40 -right-30 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+        <div className='pointer-events-none absolute -top-50 -left-40 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <Reveal>
                 <div className='mb-6 lg:mb-20'>
@@ -98,7 +99,7 @@ export default function Project() {
                                         ${
                                             isActive
                                                 ? "bg-linear-to-l from-blue-600 to-indigo-500 text-white scale-110"
-                                                : "bg-white text-blue-600 hover:scale-100"
+                                                : "bg-white text-blue-600 hover:scale-100 dark:bg-slate-800 dark:text-blue-400"
                                         }
                                         `}
                                     >
@@ -110,25 +111,25 @@ export default function Project() {
                                     <>
                                     {/*Left side*/}
                                         <div className="relative pt-16 md:pt-0 md:pr-10 flex flex-col justify-center">
-                                            <span className="pointer-events-none absolute text-[120px] md:text-[180px] leading-none font-black text-blue-100/60 -z-10 right-0 top-0 select-none">
+                                            <span className="pointer-events-none absolute text-[120px] md:text-[180px] leading-none font-black text-blue-200 dark:text-slate-800/50 -z-10 right-0 top-0 select-none">
                                                 {(index + 1).toString().padStart(2, '0')}
                                             </span>
-                                            <div className="flex w-fit pt-1.5 px-4 py-1 gap-1 rounded-full text-blue-600 border border-blue-200 bg-blue-50 shadow-lg backdrop-blur">
+                                            <div className="flex w-fit pt-1.5 px-4 py-1 gap-1 rounded-full text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-slate-400 bg-blue-50 dark:bg-slate-800 shadow-lg backdrop-blur">
                                                 <FolderOpenDot className="h-4 w-4"/>
                                                 <span className="inline-flex px-1 text-[11px] font-bold font-mono tracking-widest uppercase">
                                                     Project
                                                 </span>
                                             </div>
                                             <h2 className={`mt-4 text-3xl lg:text-4xl font-black tracking-tight transition-all duration-300
-                                                    ${isActive ? "text-blue-600" : "text-slate-950"}
+                                                    ${isActive ? "text-blue-600"  : "text-slate-950 dark:text-slate-100"}
                                                     `}
                                                 >
                                                 {project.title}
                                             </h2>
-                                            <h3 className="mt-2 text-lg font-semibold text-blue-600">
+                                            <h3 className="mt-2 text-lg font-semibold text-blue-600 dark:text-blue-300">
                                                 {project.role}
                                             </h3>
-                                            <div className="mt-4 gap-1 pt-3 pb-1 flex w-fit rounded-full border border-blue-200 bg-blue-50 tracking-wide px-4 py-2 text-xs font-mono text-blue-600 shadow-sm backdrop-blur">
+                                            <div className="mt-4 gap-1 pt-3 pb-1 flex w-fit rounded-full border border-blue-200 dark:border-slate-400 bg-blue-50 dark:bg-slate-800 tracking-wide px-4 py-2 text-xs font-mono text-blue-600 dark:text-blue-300 shadow-sm backdrop-blur">
                                                 <CalendarDays className="h4 w-4 pb-2 "/>
                                                 {formatMonth(project.spring.start)} -{" "}
                                                 {formatMonth(project.spring.end)}
@@ -152,25 +153,25 @@ export default function Project() {
                                         />
 
                                         <div className="relative pl-0 md:pl-10 flex flex-col justify-center">
-                                            <span className="pointer-events-none absolute text-[120px] md:text-[180px] leading-none font-black text-blue-100/60 -z-10 right-0 top-0 select-none">
+                                            <span className="pointer-events-none absolute text-[120px] md:text-[180px] leading-none font-black text-blue-200 dark:text-slate-800/50 -z-10 right-0 top-0 select-none">
                                                 {(index + 1).toString().padStart(2, '0')}
                                             </span>
-                                            <div className="flex w-fit pt-1.5 px-4 py-1 gap-1 rounded-full text-blue-600 border border-blue-200 bg-blue-50 shadow-lg backdrop-blur">
+                                            <div className="flex w-fit pt-1.5 px-4 py-1 gap-1 rounded-full text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-slate-400 bg-blue-50 dark:bg-slate-800 shadow-lg backdrop-blur">
                                                 <FolderOpenDot className="h-4 w-4"/>
                                                 <span className="px-1 text-[11px] font-bold font-mono tracking-widest uppercase">
                                                     Project
                                                 </span>
                                             </div>
                                             <h2 className={`mt-4 text-3xl lg:text-4xl font-black tracking-tight transition-all duration-300
-                                                    ${isActive ? "text-blue-600" : "text-slate-950"}
+                                                    ${isActive ? "text-blue-600" : "text-slate-950 dark:text-slate-100"}
                                                     `}
                                                 >
                                                 {project.title}
                                             </h2>
-                                            <h3 className="mt-2 text-lg font-semibold text-blue-600">
+                                            <h3 className="mt-2 text-lg font-semibold text-blue-600 dark:text-blue-300">
                                                 {project.role}
                                             </h3>
-                                            <div className="mt-4 gap-1 pt-3 pb-1 flex w-fit rounded-full border border-blue-200 bg-blue-50 tracking-wide px-4 py-2 text-xs font-mono text-blue-600 shadow-sm backdrop-blur">
+                                            <div className="mt-4 gap-1 pt-3 pb-1 flex w-fit rounded-full border border-blue-200 dark:border-slate-400 bg-blue-50 dark:bg-slate-800 tracking-wide px-4 py-2 text-xs font-mono text-blue-600 dark:text-blue-300 shadow-sm backdrop-blur">
                                                 <CalendarDays className="h4 w-4 pb-2 "/>
                                                 {formatMonth(project.spring.start)} -{" "}
                                                 {formatMonth(project.spring.end)}

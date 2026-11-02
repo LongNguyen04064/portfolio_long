@@ -149,6 +149,8 @@
   color: #262626;
   font-size: 16px;
   font-weight: 600;
+  transition: color 0.3s ease;
+  z-index: 1;
 }
 
 /* AFTER */
@@ -178,4 +180,20 @@
 .nav-menu a:hover::after {
   transform: scaleY(1);
   opacity: 1;
+}
+
+.dark .nav-menu a {
+  color: #e5e7eb;
+}
+
+.dark .nav-menu a:hover {
+  color: #60a5fa;
+}
+
+.dark .nav-menu a::after {
+  background: linear-gradient(
+    to right,
+    #60a5fa,
+    #818cf8
+  );
 }
