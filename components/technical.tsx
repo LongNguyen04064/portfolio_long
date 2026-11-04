@@ -55,10 +55,13 @@ const technologies = [
 export default function Technical() {
   return (
     <section id='technical' className='relative min-h-screen overflow-hidden border-t border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-950 py-24 lg:py-32'>
+        {/* Background decorations */}
         <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
         <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+        {/* Main content container */}
         <div className='relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10'>
+            {/* Section heading */}
             <Reveal>
                 <div className='mb-6 lg:mb-20'>
                     <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>03. Arsenal</p>
@@ -71,6 +74,7 @@ export default function Technical() {
                     <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
                 </div>
             </Reveal>
+            {/* Skills introduction */}
             <div className="grid lg:grid-cols-[0.8fr_2fr] gap-12 lg:gap-20">
                 <Reveal>
                     <div className="relative">
@@ -91,15 +95,18 @@ export default function Technical() {
                 </Reveal>
                 <Reveal>
                     <div className="grid sm:grid-cols-2 gap-3">
+                        {/* Technology card */}
                         {technologies.map((item, index) => {
                             return (
                                 <div key={item.name} className="group relative overflow-hidden rounded-xl border border-slate-400 bg-white/80 p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-500 dark:border-slate-700 dark:bg-slate-900/80 dark:hover:border-blue-400">
                                     <div className="pointer-events-none absolute -left-10 -top-10 h-20 w-20 rounded-full bg-blue-500/50 blur-3xl transition-all duration-500 group-hover:bg-blue-500/20" />
+                                    {/* Technology number */}
                                     <span className="absolute right-5 top-5 font-mono text-[10px] tracking-widest text-slate-700 transition-colors duration-300 group-hover:text-blue-600 dark:text-slate-500 dark:group-hover:text-blue-400">
                                         {(index + 1)
                                             .toString()
                                             .padStart(2, "0")}
                                     </span>
+                                    {/* Technology icon */}
                                     <div className="relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-400 p-2.5 transition-all duration-300 group-hover:scale-110 group-hover:text-blue-600 group-hover:border-blue-500/50 group-hover:bg-blue-500/10 dark:border-slate-700 dark:group-hover:text-blue-400">
                                         <img 
                                             src={item.icon}
@@ -108,6 +115,7 @@ export default function Technical() {
                                             loading="lazy">
                                         </img>
                                     </div>
+                                    {/* Technology information */}
                                     <div className="relative mt-2">
                                         <div className="flex flex-wrap items-center gap-2">
                                             <h4 className="text-lg font-semibold tracking-tight text-blue-600 dark:text-blue-400">

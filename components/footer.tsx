@@ -23,6 +23,7 @@ export default function Footer() {
 
     return (
         <footer className="relative overflow-hidden border-t border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-950 px-6 py-10">
+            {/* Background decorations */}
             <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
             <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
             <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
@@ -49,6 +50,7 @@ export default function Footer() {
                             Built with Next.js & Tailwind CSS
                         </p>
                     </div>
+                    {/* Social media links */}
                     <div className="order-2 flex items-center gap-3 md:order-3">
                         {socialItems.map((item) => (
                             <a

@@ -6,12 +6,13 @@ import { motion } from 'framer-motion'
 import Reveal from './reveal'
 
 export default function Info() {
+  // Social media and contact links
   const infoItem = [
     {src:"/icons/github.png", href:"https://github.com/LongNguyen04064", lable:"Github"},
     {src:"/icons/mail1.png", href:"mailto:ntlong058@gmail.com", lable:"Email"},
     {src:"/icons/linkedin.png", href:"https://www.linkedin.com/in/ntlong0406/", lable:"LinkedIn"},
   ]
-
+  // Reusable code line component
   function CodeLine({
     number,
     content,
@@ -33,12 +34,15 @@ export default function Info() {
 
   return (
     <section id='home' className='relative min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950 flex items-center transition-all duration-500'>
+      {/* Background decorations */}
       <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
       <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
       <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+      {/* Main content layout */}
       <div className='relative z-10 mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 pt-28 pb-20 lg:pt-32'>
         <div className='grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-14 lg:gap-16 items-center'>
           <div className='text-center lg:text-left'>
+            {/* Availability status */}
             <div className='inline-flex items-center gap-2 rounded-full border border-blue-200 dark:border-slate-400 bg-blue-50/80 dark:bg-slate-800 px-4 py-2 mb-7 shadow-sm'>
               <span className='relative flex h-2 w-2'>
                 <span className='absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping'></span>
@@ -48,7 +52,7 @@ export default function Info() {
                 Open to opportunities
               </span>
             </div>
-
+            {/* Name and job title */}
             <motion.div 
               initial={{
                 opacity:0,
@@ -75,7 +79,7 @@ export default function Info() {
                 </span>
               </h1>
             </motion.div>
-
+            {/* Animated developer title */}
             <motion.div
               initial={{
                 opacity: 0, y: 25
@@ -104,7 +108,7 @@ export default function Info() {
                 </div>
               </div>
             </motion.div>
-
+            {/* Personal description */}
             <motion.p 
               initial={{
                 opacity: 0, y: 25
@@ -120,7 +124,7 @@ export default function Info() {
             >
             Frontend Developer focused on building clean, interactive, and responsive user interfaces. Turning design concepts into functional, high-performance web applications and combine animations to make the website more visually appealing.
             </motion.p> 
-
+            {/* Location, social links and statistics */}
             <motion.div
               initial={{
                 opacity: 0, y: 25
@@ -181,7 +185,7 @@ export default function Info() {
                 </div>
               </div>
             </motion.div>
-
+            {/* Navigation buttons */}
             <motion.div
               initial={{
                 opacity: 0, y: 25
@@ -217,7 +221,7 @@ export default function Info() {
               </div>
             </motion.div>
           </div>
-          
+          {/* Developer code showcase */}
           <Reveal>
             <div className="relative flex items-center justify-center lg:justify-end">
               <div className='absolute w-70 sm:w-100 h-70 sm:h-100 rounded-full bg-blue-300/20 blur-3xl'></div>
@@ -231,6 +235,7 @@ export default function Info() {
                   </div>
                   <span className='rounded-full bg-blue-100 dark:bg-blue-950/70 px-3 py-1 font-mono text-[10px] font-semibold text-blue-600 dark:text-blue-400'>TypeSctipt</span>
                 </div>
+                {/* Developer information code */}
                 <div className='overflow-x-auto p-5 sm:p-7 font-mono text-xs sm:text-sm leading-8'>
                   <div className='min-w-100'>
                     <CodeLine
@@ -356,7 +361,8 @@ export default function Info() {
               </div>
             </div>
           </Reveal>
-        </div> 
+        </div>
+        {/* Scroll indicator */}
         <a href="#" className='group absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2'>
           <span className='font-mono text-[10px] tracking-[0.3em] uppercase text-slate-400 group-hover:text-blue-500 transition-all duration-300'>Scroll</span>
           <div className='flex h-8 w-5 items-start justify-center rounded-full border-2 border-slate-300 p-1 group-hover:border-blue-500 transition-all duration-300'>

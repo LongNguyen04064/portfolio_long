@@ -10,7 +10,7 @@ export default function Contact() {
         email:"",
         message:"",
     })
-
+    // Handle input changes
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
@@ -19,17 +19,16 @@ export default function Contact() {
             [e.target.name]: e.target.value,
         })
     }
-
+    // Form validation
     const isFormValid =
         form.name.trim() !== "" &&
         form.email.trim() !== "" &&
         form.message.trim() !== ""
-        
+
+    // Form submission handler       
     const handelSubmit  = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-
         if (!isFormValid) return
-
         console.log("Form submitted:", form)
         setForm({
             name: "",
@@ -37,7 +36,7 @@ export default function Contact() {
             message: "",
         })
     }
-        
+    // Contact information data
     const contactItems = [
         {
             title:"Email",
@@ -67,10 +66,12 @@ export default function Contact() {
 
   return (
     <section id='contact' className='relative overflow-hidden border-t border-slate-300 dark:border-slate-600 bg-blue-50 dark:bg-slate-950 py-24 sm:py-32'>
+        {/* Background decorations */}
         <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
         <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <div className='pointer-events-none absolute -bottom-50 -left-50 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <Reveal>
+        {/* Main content container */}
         <div className='relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10'>
             <Reveal>
                 <div className='mb-6 lg:mb-20'>
@@ -84,13 +85,16 @@ export default function Contact() {
                     <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
                 </div>
             </Reveal>
+            {/* Contact information layout */}
             <div className='grid lg:grid-cols-2 gap-10 lg:gap-16'>
+                {/* Introduction text */}
                 <div className='flex flex-col'>
-                    <Reveal>
+                    <Reveal> 
                         <p className='max-w-7xl text-xl text-muted-foreground leading-relaxed mb-8'>
                             Open to product engineering roles, freelance builds, and collaboration on motion-heavy web experiences.
                         </p>
                     </Reveal>
+                    {/* Contact links */}
                     <div className='mt-8 flex flex-col gap-3'>
                         {contactItems.map((item) => (
                             <a key={item.title} 
@@ -98,7 +102,7 @@ export default function Contact() {
                                target='_blank'
                                rel="noopener noreferrer"
                                className='group flex min-h-19.5 items-center gap-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900/80 px-4 py-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg dark:hover:shadow-slate-800'>
-                                <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 dark:bg-slate-600 transition-all duration-300 group-hover:bg-blue-100'>
+                                <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 dark:bg-slate-600 transition-all duration-300 group-hover:bg-blue-100'>{/* Contact icon */}
                                     {item.icon ? (
                                         <Image
                                         src={item.icon}
@@ -110,7 +114,8 @@ export default function Contact() {
                                         <MapPin className='h-5 w-5 text-orange-500'/>
                                     )}
                                 </div>
-                                <div className="min-w-0 flex-1">
+                                {/* Contact details */}
+                                <div className="min-w-0 flex-1"> 
                                     <p className=" font-mono text-[11px] tracking-[0.2em] text-slate-500 dark:text-slate-400">
                                         {item.title}
                                     </p>
@@ -122,6 +127,7 @@ export default function Contact() {
                             </a>
                         ))}
                     </div>
+                    {/* Contact footer note */}
                     <div className="mt-8 flex items-center gap-3 text-xs text-slate-400">
                         <Mail className='h-4 w-4'/>
                         <span>
@@ -129,6 +135,7 @@ export default function Contact() {
                         </span>
                     </div>
                 </div>
+                {/* Contact form container */}
                 <div className='rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900/80 p-6 shadow-lg shadow-slate-200/60 dark:shadow-slate-800 sm:p-8 lg:p-10'>
                     <div className='mb-7 flex items-center gap-3'>
                         <div className='flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 dark:bg-slate-600 transition-all duration-300 group-hover:bg-blue-100'>
@@ -138,7 +145,9 @@ export default function Contact() {
                             <p className='font-mono text-xs font-semibold tracking-[0.15em] text-blue-500 uppercase'>send a message</p>
                         </div>
                     </div>
+                    {/* Message form */}
                     <form onSubmit={handelSubmit} className='space-y-5'>
+                        {/* Name and email inputs */}
                         <div className='grid sm:grid-cols-2 gap-4'>
                             <div>
                                 <input 
@@ -161,6 +170,7 @@ export default function Contact() {
                                 </input>
                             </div>
                         </div>
+                        {/* Message input */}
                         <div className='relative'>
                             <textarea
                                 name="message"
@@ -170,10 +180,11 @@ export default function Contact() {
                                 placeholder="Your Message"
                                 className="min-h-42.5 w-full resize-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900/80 px-4 py-4 font-mono text-sm leading-7 text-slate-700 dark:text-slate-400 outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-blue-400 focus:ring-4 focus:ring-blue-50"/>
                                 
-                                <div className='pointer-events-none absolute bottom-3 right-4 font-mono text-[10px] text-slate-400'>
-                                    {form.message.length}/500
-                                </div>
+                            <div className='pointer-events-none absolute bottom-3 right-4 font-mono text-[10px] text-slate-400'>
+                                {form.message.length}/500
+                            </div>
                         </div>
+                        {/* Submit button */}
                         <button
                             type="submit"
                             disabled={!isFormValid}

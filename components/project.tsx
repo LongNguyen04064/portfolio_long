@@ -52,7 +52,7 @@ export default function Project() {
             year:"numeric",
             }).format(date);
     };
-
+    // Project toggle handler
     const handleProjectClick = (index: number) => {
         setActiveProject(
             activeProject === index ? null : index
@@ -61,11 +61,14 @@ export default function Project() {
     
   return (
     <section id="projects" className='relative min-h-screen overflow-hidden border-t border-slate-300 dark:border-slate-600 bg-blue-50 dark:bg-slate-950 py-24 lg:py-32 transition-all duration-300'>
+        {/* Background decorations */}
         <div className='pointer-events-none absolute inset-0 bg-blue-200/20 dark:bg-blue-900/20'/>
         <div className='pointer-events-none absolute -top-40 -right-40 w-125 h-125 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <div className='pointer-events-none absolute -bottom-40 -right-30 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
         <div className='pointer-events-none absolute -top-50 -left-40 w-112.5 h-112.5 rounded-full bg-blue-200/20 dark:bg-blue-900/20 blur-3xl'/>
+        {/* Main content container */}
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+            {/* Section heading */}
             <Reveal>
                 <div className='mb-6 lg:mb-20'>
                     <p className='font-mono text-xs text-blue-600 tracking-widest uppercase mb-3'>02. Career</p>
@@ -75,6 +78,7 @@ export default function Project() {
                     <div className='mt-5 h-px w-50 bg-linear-to-r from-blue-500 to-transparent'></div>
                 </div>
             </Reveal>
+            {/* Project timeline */}
             <Reveal>
             <div className='relative'>
                 <div className='absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-blue-300 hidden md:block'></div>
@@ -151,7 +155,6 @@ export default function Project() {
                                         isActive={isActive}
                                         onClick={() => handleProjectClick(index)}
                                         />
-
                                         <div className="relative pl-0 md:pl-10 flex flex-col justify-center">
                                             <span className="pointer-events-none absolute text-[120px] md:text-[180px] leading-none font-black text-blue-200 dark:text-slate-800/50 -z-10 right-0 top-0 select-none">
                                                 {(index + 1).toString().padStart(2, '0')}
